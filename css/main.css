@@ -1,1 +1,18 @@
-*{background-color: aquamarine;}
+*{
+    background-color: aquamarine;
+}
+.gray-text{
+    color: grey;
+}
+
+.salmon-text{
+    color:salmon;
+}
+
+.yellowgreen-text{
+    color:yellowgreen;
+}
+
+.big-text{
+    font-size: 2.25rem;
+}
