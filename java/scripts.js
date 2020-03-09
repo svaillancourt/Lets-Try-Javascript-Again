@@ -126,3 +126,24 @@ function currentDayString()
 }
 
 console.log( 'The current date is: \r\n ' + currentDayString());
+
+// Let's review some conditions-related operators..
+
+// check for equivalency (type -agnostic.)
+console.log (1 == true ); // True
+console.log ('Hello, World' == true); // False
+console.log (-137 == true); // False
+console.log('test' == 'test'); // True
+console.log( 36 == '36'); // True
+console.log( 0 == false ); // True
+console.log( 'test string' === 'test string' ); // true
+
+
+// Check if identical ( value comparison including data type.)
+console.log(1 === true); // false
+console.log('' === true); // false
+console.log(-137 === true); // false
+console.log('test' === 'test'); // True
+console.log( 36 === '36'); // False
+console.log( 0 === false ); // false
+console.log( 'test string' === 'test string' ); // true
