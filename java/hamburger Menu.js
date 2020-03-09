@@ -32,5 +32,22 @@ console.log('Object "hobbies": ' + myObject.hobbies[0] + ' ' + myObject.hobbies[
 // lets add to the hobbies array. just like normal! it is an array after all
 
 myObject.hobbies.push('programming');
+
 console.log('Update hobbies:');
 console.log(myObject.hobbies);
+
+console.log('Update hobbies:');
+console.log(myObject);
+
+/*Lets ramp things up a bit with a method */
+
+var newObject = {
+    myNum: 5,
+    updateNum: function (){ // here is a method! Note the ew syntaxx, versus a function.
+        // difference from a function?
+        this.myNum = this.myNum + 5;
+        return this.myNum;
+    }
+}
+
+console.log(newObject);
