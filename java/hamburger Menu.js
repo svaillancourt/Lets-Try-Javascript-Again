@@ -48,6 +48,46 @@ var newObject = {
         this.myNum = this.myNum + 5;
         return this.myNum;
     }
+};
+
+/*  Object Constructors  */
+
+function Person (name, age, hobbies ) {
+    this.name = name;
+    this.age = age;
+    this.hobbies = hobbies;
 }
 
-console.log(newObject);
+// let's make a new instance of a "person". This is called an object.
+
+var jerry = new Person( 'Jerry', 61, ['snowboarding', 'action movies', 'programming']);
+
+// and anoher! isn't this easier than typing out a while object every thime?!?!
+var sally = new Person( 'Sally', 36, ['daredevil biking', 'skydiving', 'teaching']);
+
+var stephane = new Person( 
+    'Stephane', 
+    31, 
+    ['bowling', 'basketball', 'event organizing', 'taylor swift']
+    );
+
+    // we can add to the blueprint using "prototype", even after its initial declaration.
+
+    Person.prototype.introduction = function (){
+    
+     // This isa method in our "Person" blueprint/prototype/class!
+     var hobbiesString = `<ul>` // Setup for List HTML. 
+     this.hobbies.forEach( function (value, index) {
+         hobbiesString += `<li>` + value + `</li>` // Loop through our hobbies and make a list item for each 
+     });
+     hobbiesString += `</ul>` // We opened a UL in this string, so lets close it! (Concatenation!)
+ 
+        document.body.innerHTML +=`
+        <h2>` + this.name `</h2>
+        <dl>
+            <dt>Age</dt>
+            <dd>` + this.age + `</dd>
+            <dt>Hobbies</dt>
+            <dd>` + hobbiesString + `</dd>
+        </dl>
+    `}
