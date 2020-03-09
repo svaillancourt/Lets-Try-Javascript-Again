@@ -28,3 +28,9 @@ console.log( myObject );
 console.log('Object "name": ' + myObject.name);
 console.log('Object "age": ' + myObject.age);
 console.log('Object "hobbies": ' + myObject.hobbies[0] + ' ' + myObject.hobbies[1]);
+
+// lets add to the hobbies array. just like normal! it is an array after all
+
+myObject.hobbies.push('programming');
+console.log('Update hobbies:');
+console.log(myObject.hobbies);
